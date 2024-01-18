@@ -29,7 +29,7 @@ namespace Mango.Services.ProductAPI.Controllers
             catch(Exception ex)
             {
                 _response.IsSuccess= false;
-                _response.ErrorMessage=new List<string>() { ex.ToString()};
+                _response.ErrorMessages=new List<string>() { ex.ToString()};
             }
             return _response;
         }
@@ -47,7 +47,7 @@ namespace Mango.Services.ProductAPI.Controllers
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessage = new List<string>() { ex.ToString() };
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
             return _response;
         }
@@ -64,7 +64,7 @@ namespace Mango.Services.ProductAPI.Controllers
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessage = new List<string>() { ex.ToString() };
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
             return _response;
         }
@@ -81,7 +81,7 @@ namespace Mango.Services.ProductAPI.Controllers
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessage = new List<string>() { ex.ToString() };
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
             return _response;
         }
@@ -98,7 +98,7 @@ namespace Mango.Services.ProductAPI.Controllers
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessage = new List<string>() { ex.ToString() };
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
             return _response;
         }

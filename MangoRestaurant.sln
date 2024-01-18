@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Web", "FrontEnd\Mango.Web\Mango.Web.csproj", "{6DA5EF33-2881-491E-AF5E-F2B3E3DBC9DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.Product API", "Services\Mango.Services.Product API\Mango.Services.Product API.csproj", "{7FFBE62F-D9E5-4D63-8628-8DAF0CBF13E1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.ProductAPI", "Services\Mango.Services.ProductAPI\Mango.Services.ProductAPI.csproj", "{D02EBD01-2EA7-436E-A5E3-059456A9E69E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{74B4F14D-DB2A-478E-BBE3-5C2FE6DA721D}"
@@ -40,10 +38,6 @@ Global
 		{6DA5EF33-2881-491E-AF5E-F2B3E3DBC9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DA5EF33-2881-491E-AF5E-F2B3E3DBC9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DA5EF33-2881-491E-AF5E-F2B3E3DBC9DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FFBE62F-D9E5-4D63-8628-8DAF0CBF13E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FFBE62F-D9E5-4D63-8628-8DAF0CBF13E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FFBE62F-D9E5-4D63-8628-8DAF0CBF13E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FFBE62F-D9E5-4D63-8628-8DAF0CBF13E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D02EBD01-2EA7-436E-A5E3-059456A9E69E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D02EBD01-2EA7-436E-A5E3-059456A9E69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D02EBD01-2EA7-436E-A5E3-059456A9E69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,7 +48,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6DA5EF33-2881-491E-AF5E-F2B3E3DBC9DC} = {DF5F462A-E7F3-44A0-A7C4-17B14D2FC316}
-		{7FFBE62F-D9E5-4D63-8628-8DAF0CBF13E1} = {0FFDBE36-8BD9-4AFB-AF03-B00E50635905}
 		{D02EBD01-2EA7-436E-A5E3-059456A9E69E} = {0FFDBE36-8BD9-4AFB-AF03-B00E50635905}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

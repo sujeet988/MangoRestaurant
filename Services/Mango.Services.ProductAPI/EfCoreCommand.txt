@@ -5,3 +5,5 @@ add-migration AddProductModelToDb
 update-database
 
 
+---github
+https://github.com/PacktPublishing/.NET-Core-Microservices---Complete-Guide-.NET-6-MVC-

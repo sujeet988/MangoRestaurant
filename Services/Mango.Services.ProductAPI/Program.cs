@@ -1,5 +1,6 @@
 using Mango.Services.ProductAPI.DbContexts;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 namespace Mango.Services.ProductAPI
 {
@@ -17,6 +18,10 @@ namespace Mango.Services.ProductAPI
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
              options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            //register autompper config
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            builder.Services.AddSingleton(mapper);
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             var app = builder.Build();
 

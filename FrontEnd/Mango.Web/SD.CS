@@ -3,7 +3,7 @@
     public static class SD //Service details
     {
 
-        public static string ProdcutAPIbBase { get; set; }
+        public static string ProductAPIBase { get; set; }
 
         public enum ApiType
         {

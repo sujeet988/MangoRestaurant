@@ -13,6 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.Product API"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.ProductAPI", "Services\Mango.Services.ProductAPI\Mango.Services.ProductAPI.csproj", "{D02EBD01-2EA7-436E-A5E3-059456A9E69E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{74B4F14D-DB2A-478E-BBE3-5C2FE6DA721D}"
+	ProjectSection(SolutionItems) = preProject
+		Snippets\Section 3 - Product API Models and Advance Setup\1 Seed Product Database.txt = Snippets\Section 3 - Product API Models and Advance Setup\1 Seed Product Database.txt
+		Snippets\How to run the final project.docx = Snippets\How to run the final project.docx
+		Snippets\New Text Document.txt = Snippets\New Text Document.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

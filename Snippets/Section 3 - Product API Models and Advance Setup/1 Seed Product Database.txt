@@ -1,22 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Mango.Services.ProductAPI.Models;
-namespace Mango.Services.ProductAPI.DbContexts
-{
-    public class ApplicationDbContext: DbContext
-    {
+base.OnModelCreating(modelBuilder);
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
-        { 
-        
-        }
-        public DbSet<Product> Products { get; set; }
-
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-
+            
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 ProductId = 1,
@@ -53,6 +37,3 @@ namespace Mango.Services.ProductAPI.DbContexts
                 ImageUrl = "",
                 CategoryName = "Entree"
             });
-        }
-    }
-}

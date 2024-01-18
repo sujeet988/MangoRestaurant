@@ -1,6 +1,6 @@
 ﻿namespace Mango.Web
 {
-    public static class SD
+    public static class SD //Service details
     {
 
         public static string ProdcutAPIbBase { get; set; }

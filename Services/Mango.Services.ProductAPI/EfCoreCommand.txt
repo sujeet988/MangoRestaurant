@@ -1,0 +1,7 @@
+﻿--add migration
+add-migration AddProductModelToDb
+
+--push to database
+update-database
+
+

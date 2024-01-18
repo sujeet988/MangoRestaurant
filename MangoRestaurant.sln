@@ -20,6 +20,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{74
 		Snippets\New Text Document.txt = Snippets\New Text Document.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{D888B0E5-73EF-4E4D-8D04-D0FA89B0D78A}"
+	ProjectSection(SolutionItems) = preProject
+		Images\11.jpg = Images\11.jpg
+		Images\12.jpg = Images\12.jpg
+		Images\13.jpg = Images\13.jpg
+		Images\14.jpg = Images\14.jpg
+		Images\mango.png = Images\mango.png
+		Images\order.PNG = Images\order.PNG
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

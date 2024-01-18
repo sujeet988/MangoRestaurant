@@ -4,6 +4,16 @@ add-migration AddProductModelToDb
 --push to database
 update-database
 
+--seed
+
+add-migration SeedProducts
+update-database
+
 
 ---github
 https://github.com/PacktPublishing/.NET-Core-Microservices---Complete-Guide-.NET-6-MVC-
+
+---tools
+azure storage explorer  for blob storage
+
+---

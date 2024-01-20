@@ -13,10 +13,13 @@ namespace Mango.Web
 
             // Add services to the container.
             builder.Services.AddHttpClient<IProductService, ProductServices>();
+            builder.Services.AddHttpClient<ICartService, CartService>();
+
             SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
             SD.ShoppingCartAPIBase = builder.Configuration["ServiceUrls:ShoppingCartAPI"];
 
             builder.Services.AddScoped<IProductService, ProductServices>();
+            builder.Services.AddScoped<ICartService, CartService>();
 
             builder.Services.AddControllersWithViews();
 

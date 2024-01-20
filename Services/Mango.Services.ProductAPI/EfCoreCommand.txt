@@ -17,5 +17,6 @@ https://github.com/PacktPublishing/.NET-Core-Microservices---Complete-Guide-.NET
 azure storage explorer  for blob storage
 
 ---cart api EF command
+database : MangoShoppingCartAPI
 add-migration AddProductAndCartModels
 update-database

@@ -4,3 +4,5 @@ To run identity Server
 3. go to nunget package cosole
 4. run command update-database
 5. 
+
+https://localhost:44365/

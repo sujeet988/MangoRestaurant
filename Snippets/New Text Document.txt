@@ -1,0 +1,6 @@
+To run identity Server
+1. select project as startup project
+2. update connection string for ur sql
+3. go to nunget package cosole
+4. run command update-database
+5. 

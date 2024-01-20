@@ -1,5 +1,6 @@
 using AutoMapper;
 using Mango.Services.ShoppingCartAPI.DbContexts;
+using Mango.Services.ShoppingCartAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -27,6 +28,7 @@ namespace Mango.Services.ShoppingCartAPI
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
             builder.Services.AddSingleton(mapper);
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddScoped<ICartRepository, CartRepository>();
 
             // swagger authentication and authrization
             builder.Services.AddAuthentication("Bearer")

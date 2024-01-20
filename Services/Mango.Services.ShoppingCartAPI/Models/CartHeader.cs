@@ -1,4 +1,6 @@
-﻿namespace Mango.Services.ShoppingCartAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Mango.Services.ShoppingCartAPI.Models
 {
     public class CartHeader
     {

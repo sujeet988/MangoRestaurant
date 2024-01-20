@@ -16,4 +16,6 @@ https://github.com/PacktPublishing/.NET-Core-Microservices---Complete-Guide-.NET
 ---tools
 azure storage explorer  for blob storage
 
----
+---cart api EF command
+add-migration AddProductAndCartModels
+update-database

@@ -12,7 +12,7 @@ namespace Mango.MessageBus
     {
         
             //can be improved
-        private string connectionString = "Endpoint=sb://mangorestaurant.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=7t3usJ6tooj30PRi5ccrTwbxS6DNGPxbmp2oVdiO3cI=";
+        private static string connectionString = "Endpoint=sb://servicebusmicrosericedemo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=s+cxsPc+sjZEkpx7GZsA+i18WYgRyqy7a+ASbJyarIc=";
 
         public async Task PublishMessage(BaseMessage message, string topicName)
         {

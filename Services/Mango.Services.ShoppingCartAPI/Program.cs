@@ -29,6 +29,10 @@ namespace Mango.Services.ShoppingCartAPI
             builder.Services.AddSingleton(mapper);
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddScoped<ICartRepository, CartRepository>();
+            builder.Services.AddScoped<ICouponRepository, CouponRepository>();
+
+            builder.Services.AddHttpClient<ICouponRepository, CouponRepository>(u => u.BaseAddress =
+            new Uri(builder.Configuration["ServiceUrls:CouponAPI"]));
 
             // swagger authentication and authrization
             builder.Services.AddAuthentication("Bearer")

@@ -1,0 +1,4 @@
+---cart api EF command
+database : MangoCouponAPI
+add-migration AddCouponToDb.
+update-database

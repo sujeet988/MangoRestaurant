@@ -1,5 +1,10 @@
+using Mango.MessageBus;
 using Mango.Services.OrderAPI.DbContexts;
+using Mango.Services.OrderAPI.Extension;
+using Mango.Services.OrderAPI.Messaging;
+using Mango.Services.OrderAPI.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
@@ -18,8 +23,19 @@ namespace Mango.Services.OrderAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+
+            var optionBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            builder.Services.AddSingleton(new OrderRepository(optionBuilder.Options));
+            builder.Services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
+            builder.Services.AddSingleton<IMessageBus, AzureServiceBusMessageBus>();
 
 
             // swagger authentication and authrization
@@ -89,10 +105,8 @@ namespace Mango.Services.OrderAPI
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
-
-
             app.MapControllers();
-
+            app.UseAzureServiceBusConsumer();
             app.Run();
         }
     }

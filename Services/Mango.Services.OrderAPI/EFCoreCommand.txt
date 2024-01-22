@@ -1,0 +1,3 @@
+add-migration pushOrderTablesToDb
+
+update-database

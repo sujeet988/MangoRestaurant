@@ -45,7 +45,7 @@ namespace Mango.Services.OrderAPI.Messaging
 
             var client = new ServiceBusClient(serviceBusConnectionString);
 
-            checkOutProcessor = client.CreateProcessor(checkoutMessageTopic);
+            checkOutProcessor = client.CreateProcessor(checkoutMessageTopic, subscriptionCheckOut);
            //// orderUpdatePaymentStatusProcessor = client.CreateProcessor(orderUpdatePaymentResultTopic, subscriptionCheckOut);
         }
 

@@ -1,4 +1,5 @@
 using Mango.Services.Email.DbContexts;
+using Mango.Services.Email.Extension;
 using Mango.Services.Email.Messaging;
 using Mango.Services.Email.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +44,8 @@ namespace Mango.Services.Email
 
 
             app.MapControllers();
+
+            app.UseAzureServiceBusConsumer();
 
             app.Run();
         }

@@ -6,3 +6,19 @@ To run identity Server
 5. 
 
 https://localhost:44365/
+
+
+https://www.rabbitmq.com/download.html
+downlaod window insattller
+otp_win64_26.2.1 --install first 
+(erlang need for rabbitmq)
+rabbitmq-server-3.12.12 --then install this
+
+--then open cmd and go to  installed  location of rabbitmq-server-3.12.12
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.12.12\sbin
+then run commnd below
+rabbitmq-plugins enable rabbitmq_management
+https://localhost:15672
+
+---then o

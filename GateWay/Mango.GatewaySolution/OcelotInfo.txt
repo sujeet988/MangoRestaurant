@@ -1,0 +1,9 @@
+Ocelot and AOcelot and APIM are both API gateways.
+
+Ocelot is an Open Source project and you need to host it yourself in your infrastructure.
+APIM is a Microsoft Azure service offering. It does everything you can find in Ocelot plus certain other things more. You can check docs to figure this out.
+APIM being a service offered by Azure (i.e. Microsoft) you can get support from MS if you are having production issues. With APIM you also have a concept of Serverless.
+
+So everything boils down to: do you enjoy creating + maintaining your gateway infrastructure and want more control - then it's Ocelot. Else it's APIM.
+
+Weigh out pros & cons of both products depending on your criteria

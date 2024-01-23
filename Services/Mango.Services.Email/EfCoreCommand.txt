@@ -1,2 +1,8 @@
 add-migration addEmailLog
 update-database
+
+----create emailSubscription  inside  topic orderupdatepaymentresulttopic 
+
+  "SubscriptionName": "emailSubscription",
+  "OrderUpdatePaymentResultTopic": "orderupdatepaymentresulttopic"
+}

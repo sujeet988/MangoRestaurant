@@ -46,7 +46,7 @@ namespace Mango.Services.OrderAPI.Messaging
             var client = new ServiceBusClient(serviceBusConnectionString);
 
             checkOutProcessor = client.CreateProcessor(checkoutMessageTopic, subscriptionCheckOut);
-           //// orderUpdatePaymentStatusProcessor = client.CreateProcessor(orderUpdatePaymentResultTopic, subscriptionCheckOut);
+           orderUpdatePaymentStatusProcessor = client.CreateProcessor(orderUpdatePaymentResultTopic, subscriptionCheckOut);
         }
 
         public async Task Start()
@@ -55,17 +55,17 @@ namespace Mango.Services.OrderAPI.Messaging
             checkOutProcessor.ProcessErrorAsync += ErrorHandler;
             await checkOutProcessor.StartProcessingAsync();
 
-            ////orderUpdatePaymentStatusProcessor.ProcessMessageAsync += OnOrderPaymentUpdateReceived;
-            ////orderUpdatePaymentStatusProcessor.ProcessErrorAsync += ErrorHandler;
-            ////await orderUpdatePaymentStatusProcessor.StartProcessingAsync();
+            orderUpdatePaymentStatusProcessor.ProcessMessageAsync += OnOrderPaymentUpdateReceived;
+            orderUpdatePaymentStatusProcessor.ProcessErrorAsync += ErrorHandler;
+            await orderUpdatePaymentStatusProcessor.StartProcessingAsync();
         }
         public async Task Stop()
         {
             await checkOutProcessor.StopProcessingAsync();
             await checkOutProcessor.DisposeAsync();
 
-            //await orderUpdatePaymentStatusProcessor.StopProcessingAsync();
-            //await orderUpdatePaymentStatusProcessor.DisposeAsync();
+            await orderUpdatePaymentStatusProcessor.StopProcessingAsync();
+            await orderUpdatePaymentStatusProcessor.DisposeAsync();
         }
         Task ErrorHandler(ProcessErrorEventArgs args)
         {

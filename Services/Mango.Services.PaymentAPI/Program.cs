@@ -1,4 +1,5 @@
 using Mango.MessageBus;
+using Mango.Services.PaymentAPI.Extension;
 using Mango.Services.PaymentAPI.Messaging;
 using PaymentProcessor;
 
@@ -36,7 +37,7 @@ namespace Mango.Services.PaymentAPI
 
 
             app.MapControllers();
-
+            app.UseAzureServiceBusConsumer();
             app.Run();
         }
     }
